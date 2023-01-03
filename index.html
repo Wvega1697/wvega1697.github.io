@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>WILLIAMS VEGA</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="49e9d6a4-d761-403f-86ac-d013cd4dad40" class="page mono"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb" style="object-position:center 61.74999999999999%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💻</span></div><h1 class="page-title">WILLIAMS VEGA</h1></header><div class="page-body"><p id="8f49ce22-f28f-4541-b7cf-5200fb965b6f" class=""><strong>hello@williamsvega.com  ·  </strong><strong><a href="https://www.linkedin.com/in/williamsvega/?locale=en_US">/in/williamsvega/</a></strong><strong>  ·  </strong><strong><a href="https://github.com/Wvega1697">github.com/wvega1697</a></strong><strong>  ·  (502) 5132 9832</strong></p><hr id="cdfcb221-2f5b-49d0-89a2-fedf9ab04d89"/><h2 id="683621ce-fc39-4a4b-8f14-b4abb19561ff" class="">Backend Developer</h2><p id="58f09e85-0b2c-40b7-9391-efa66e56a2dc" class="">I am a highly motivated backend developer with 3 years of experience in building and maintaining scalable systems and testing. I have experience in a variety of programming languages, including Java, Python, C#; and have a strong understanding of principles such as RESTful architecture, database design, and deployment pipelines. I believe in writing clean, efficient code, continuously learning and improving my skills. I am excited to bring my passion for delivering high quality products to your team.</p><h1 id="6f9be45d-2237-4cda-aac9-a0d8988de872" class="">WORK EXPERIENCE</h1><div id="112440da-9c19-4672-ad24-5274c1c17969" class="column-list"><div id="91ddda50-ea4d-4cfd-aae9-7f2fd94612ae" style="width:12.5%" class="column"><figure id="5cb8b677-cb85-4e4a-9788-fb53c0c40106" class="image"><a href="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled.png"><img style="width:200px" src="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled.png"/></a></figure></div><div id="f9d229fa-ea9b-4bff-9655-07971ec1ecaa" style="width:87.5%" class="column"><h2 id="1ff403ac-d668-4a3d-a927-5f07a8c3c5a0" class="">Java Backend Developer at BOWPI</h2><p id="16b82c69-7f3d-4c72-98cf-a7705b8b725a" class="">September 2021 - Present · 1 yr 6 mos [Guatemala] [<a href="https://www.linkedin.com/company/bowpi/mycompany/">Fintech Company</a>]</p></div></div><p id="e676e0a7-d101-4b48-befe-e5fa36a6b683" class=""><strong>RESPONSIBILITIES</strong></p><ul id="ea7dfc31-a683-4a99-ad8f-e434e095ebdd" class="bulleted-list"><li style="list-style-type:disc">Work on projects with agile SCRUM methodology.</li></ul><ul id="8b7f4891-a931-4074-94fe-94e1020adad6" class="bulleted-list"><li style="list-style-type:disc">Analyze, understand and implement customer requirements.</li></ul><ul id="fe27de44-3840-4b71-9f80-d9576cb4154d" class="bulleted-list"><li style="list-style-type:disc">Build and maintain efficient and scalable systems.</li></ul><ul id="a06511b5-35bb-4396-9a09-688009cc6fe9" class="bulleted-list"><li style="list-style-type:disc">Create endpoints to connect web systems to databases.</li></ul><ul id="fc4b8f63-b1ae-4a64-a55e-f0d510bd398b" class="bulleted-list"><li style="list-style-type:disc">Participated in sprint planning sessions, client meetings and project retrospectives.</li></ul><p id="08a5275d-c187-4f3a-a235-854992e1faab" class=""><strong>KEY ACCOMPLISHMENTS</strong></p><ul id="c5962a5d-f94f-4cdc-bdbb-0089c537fe93" class="bulleted-list"><li style="list-style-type:disc">I successfully optimized code for a microservice that resulted in an 80% decrease in runtime. </li></ul><ul id="e7d12ecd-2af1-45d6-ab61-80f5dfcca57a" class="bulleted-list"><li style="list-style-type:disc">Write excellent documentation that includes clear descriptions, flowcharts and expected results of the endpoints I have developed.</li></ul><div id="047e33ea-9ba5-4941-9900-5a074fb3de71" class="column-list"><div id="ca378fa4-1e18-4cb5-835f-7f7fde3cebd0" style="width:12.5%" class="column"><figure id="f87e6936-e6f9-42be-a31e-a0992c61f164" class="image"><a href="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%201.png"><img style="width:200px" src="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%201.png"/></a></figure></div><div id="fcca60cb-7ecd-47cc-8d95-3ea080bc1791" style="width:87.5%" class="column"><h2 id="582d5a59-c48c-4d80-848a-4682d244703b" class="">IT Engineer / Tester at BOWPI</h2><p id="c667fcac-8e5a-4602-a446-7daf641f842a" class="">June 2019 - October 2021 · 2 yr 5 mos [Guatemala] [<a href="https://www.ericsson.com/en">Telecommunications company</a>]</p></div></div><p id="b189f3fa-1fed-4c7c-ae9e-e9c2f89ce5a8" class="">
+</p><p id="e10219ca-d5ef-494e-ac36-3be317e73602" class=""><strong>RESPONSIBILITIES</strong></p><ul id="bb25d12f-633f-4bcb-a527-8b8b13ab69ad" class="bulleted-list"><li style="list-style-type:disc">Report errors in a clear, concise and reproducible manner.</li></ul><ul id="1a0f4f77-c41a-4f52-979e-0d9d054fa22d" class="bulleted-list"><li style="list-style-type:disc">Using Jira and X-Ray for design, assign and execute test cases.</li></ul><ul id="51bf6f6b-ae09-48e9-8288-5625c9d02424" class="bulleted-list"><li style="list-style-type:disc">Validation of services with unit testing.</li></ul><ul id="3c3f03ba-0a3e-437d-8ca3-24ffbd89b5c9" class="bulleted-list"><li style="list-style-type:disc">Executing regression testing in frontend and backend applications.</li></ul><ul id="b7214dc3-b34f-402f-8008-3750e7ed0697" class="bulleted-list"><li style="list-style-type:disc">Execution of daily Sanity.</li></ul><p id="87cc7347-0a0c-46c2-b6b3-8c788324a0c6" class=""><strong>KEY ACCOMPLISHMENTS</strong></p><ul id="420bcd09-a5f9-4526-93ba-580c7190db6d" class="bulleted-list"><li style="list-style-type:disc">I successfully led the test design team that resulted in shorter test design time and higher tests quality.</li></ul><ul id="04e33e45-4e7b-467a-8a9d-fe36e29f731b" class="bulleted-list"><li style="list-style-type:disc">I had sessions directly with the client in which I explained the test designs that would be executed together, making these sessions shorter and making the client feel more satisfied.</li></ul><div id="44b38197-0225-4d7d-82c0-f58a5696ee18" class="column-list"><div id="6db55621-84a3-4c2b-8401-2b072e694108" style="width:12.5%" class="column"><figure id="e7a1d9bf-8cb4-4578-9380-40f8850b72fb" class="image"><a href="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%202.png"><img style="width:100px" src="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%202.png"/></a></figure></div><div id="0ccdc974-be42-4b81-b9af-a693ea899146" style="width:87.5%" class="column"><h2 id="5900ba9a-c7db-495c-a93a-393d109f5e32" class="">Freelance QA <strong>Tester</strong> at UTest</h2><p id="bc22bccb-6df9-4bac-83a7-a745b9d5c429" class="">December 2020 - September 2021 · 10 mos [Guatemala] [<a href="https://www.linkedin.com/company/utest/">Freelance software testing company</a>]</p></div></div><p id="401cddda-75ed-4c7b-b1e2-15e73bf42a9e" class=""><strong>RESPONSIBILITIES</strong></p><ul id="138bb09a-807d-4019-bafd-dcaa625a2fb4" class="bulleted-list"><li style="list-style-type:disc">Report errors in a clear, concise and reproducible manner.</li></ul><ul id="92a7ac21-56cf-4e31-9eb2-8f2cd2bc5263" class="bulleted-list"><li style="list-style-type:disc">Validation of services with unit testing.</li></ul><ul id="9912ff9e-4991-46ff-b115-a837ee35de83" class="bulleted-list"><li style="list-style-type:disc">Executing regression testing in frontend, backend  and mobile applications.</li></ul><p id="f0d31fbd-cca7-4b1f-9741-8c1b507d3fff" class=""><strong>KEY ACCOMPLISHMENTS</strong></p><ul id="3a995740-6f6d-484f-a3ec-337fd15f68f0" class="toggle"><li><details open=""><summary>Got a <a href="https://www.utest.com/articles/we-have-a-star-whose-bug-reports-are-excellent">tester praise</a></summary><figure id="e42c627d-2e0f-4a57-ab33-d97e7e79ac25" class="image"><a href="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%203.png"><img style="width:783px" src="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%203.png"/></a></figure></details></li></ul><h1 id="e5979273-9025-4867-beb0-344a1de193a2" class="">SKILLS</h1><div id="12425415-70f8-40d5-bdfc-ec4ff6edd0c5" class="column-list"><div id="074b0738-16c0-41b2-8efb-e827472496ad" style="width:33.333333333333336%" class="column"><ul id="e1dfb49c-f2bf-463c-9714-88c40aa555ee" class="bulleted-list"><li style="list-style-type:disc">Java</li></ul><ul id="d414c003-2b3e-4a44-a439-d02c6b9328e3" class="bulleted-list"><li style="list-style-type:disc">C#</li></ul><ul id="cf0ee2f4-fe83-4421-9eb3-b23b82910d42" class="bulleted-list"><li style="list-style-type:disc">Unity</li></ul></div><div id="430f78a0-b3a2-4493-a42d-c5f69a3cb714" style="width:33.333333333333336%" class="column"><ul id="08d92c41-d1ed-428d-b4c4-31f1ae381cf3" class="bulleted-list"><li style="list-style-type:disc">Git</li></ul><ul id="b73edfb4-16d2-4c8e-b61e-18b5221e8f02" class="bulleted-list"><li style="list-style-type:disc">GitHub</li></ul><ul id="9a0b29ae-3b53-4d8f-bbd7-cbea830155b3" class="bulleted-list"><li style="list-style-type:disc">Jenkins</li></ul></div><div id="d922b4c8-3c22-4710-babf-ed43594c1c25" style="width:33.33333333333333%" class="column"><ul id="09693e00-66b0-4672-887a-f705b4ff93dc" class="bulleted-list"><li style="list-style-type:disc">SQL Databases</li></ul><ul id="9f923c62-adcb-43ce-8804-492365ae817d" class="bulleted-list"><li style="list-style-type:disc">No-SQL Databases</li></ul><ul id="929e5fff-ab07-42a5-8f9e-2549fe4aea3c" class="bulleted-list"><li style="list-style-type:disc">Python</li></ul></div></div><h1 id="a7a70cea-98f5-4459-9939-25fafda072f3" class="">EDUCATION</h1><div id="d48f119d-246f-42bf-88a1-faf5171b6f56" class="column-list"><div id="fa1c80da-a5ae-48bd-8e89-b8f6d84ef40f" style="width:12.5%" class="column"><figure id="66cc30f9-0865-46b9-8742-81a5107afe8c" class="image"><a href="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%204.png"><img style="width:100px" src="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%204.png"/></a></figure></div><div id="7d0ae1e2-fe94-4a87-a88f-ae6a4387c1aa" style="width:87.5%" class="column"><h2 id="ae0b630d-6842-4a72-8f27-0fefe0b1ced7" class="">Active Student at <a href="https://www.platzi.com/">Platzi</a></h2><h3 id="5b27dbfe-d52f-4dfa-82b3-3bc211d4fb72" class="">2019 - Present</h3><p id="4aee9237-8f47-41eb-8a5e-ee03d86789ce" class=""><a href="https://www.linkedin.com/in/williamsvega/details/certifications/?locale=en_US">Click to see the Certifications</a></p></div></div><div id="468ad8db-8f66-45c8-afde-ddc41a2f251a" class="column-list"><div id="28b25646-c6bb-4f5b-b77c-8f8fc716c9f6" style="width:12.5%" class="column"><figure id="d6a7d01e-be9a-4a09-a07e-4db18a293786" class="image"><a href="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%205.png"><img style="width:100px" src="WILLIAMS%20VEGA%2049e9d6a4d761403f86acd013cd4dad40/Untitled%205.png"/></a></figure></div><div id="a67fb2d5-6230-4ac5-94e2-76d2bf5d7261" style="width:87.5%" class="column"><h2 id="78fe22a6-75b2-4e78-90b8-b59155b4224b" class="">Science and Systems Engineering at <a href="https://www.linkedin.com/school/universidad-de-san-carlos-de-guatemala/"><strong>Universidad de San Carlos de Guatemala</strong></a></h2><h3 id="ef9c23da-5147-49e8-8bd4-7d8c070bbd90" class="">2017 - 2020</h3></div></div><h1 id="30a77a8f-8472-4861-8b18-30a4bfd51534" class="">LANGUAGES</h1><p id="3cc86a2f-657f-42dc-bc02-07498880fe51" class="">Spanish and English.</p><hr id="ef121a6f-1833-478a-b934-2eccec6f06c5"/><p id="85ee0d45-170a-4882-9e56-52472501ae9d" class=""><strong>hello@williamsvega.com  ·  </strong><strong><a href="https://www.linkedin.com/in/williamsvega/?locale=en_US">/in/williamsvega/</a></strong><strong>  ·  </strong><strong><a href="https://github.com/Wvega1697">github.com/wvega1697</a></strong><strong>  ·  (502) 5132 9832</strong></p></div></article></body></html>
